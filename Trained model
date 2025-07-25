@@ -1,0 +1,28 @@
+import tensorflow as tf
+from model_builder import build_model
+from data_loader import train_data_gen, val_data_gen
+from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
+
+class StopAt95Accuracy(tf.keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs=None):
+        if logs.get('accuracy') >= 0.95 or logs.get('val_accuracy') >= 0.95:
+            print("\nReached 95% accuracy. Stopping training.")
+            self.model.stop_training = True
+
+model = build_model()
+
+early_stopping = EarlyStopping(monitor="val_loss", patience=5, restore_best_weights=True)
+reduce_lr = ReduceLROnPlateau(monitor="val_loss", factor=0.5, patience=3, min_lr=1e-6)
+stop_at_95 = StopAt95Accuracy()
+
+EPOCHS = 20
+
+history = model.fit(
+    train_data_gen,
+    validation_data=val_data_gen,
+    epochs=EPOCHS,
+    callbacks=[early_stopping, reduce_lr, stop_at_95],
+    verbose=1
+)
+
+model.save('rice_model.h5')
