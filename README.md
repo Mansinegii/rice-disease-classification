@@ -12,7 +12,7 @@ This project focuses on detecting and classifying four types of rice leaf diseas
   - Blast
   - Brown Spot
   - Tungro
-- Images were resized to 224x224 for model compatibility
+- Images were resized to 150x150 for model compatibility
 
 ---
 
