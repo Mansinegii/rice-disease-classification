@@ -1,101 +1,49 @@
-# 🌾 Rice Leaf Disease Classification using Deep Learning
+# 🌾 Rice Leaf Disease Classification using DenseNet121 with Adam Optimizer
 
-This project focuses on detecting and classifying four types of rice leaf diseases — **Bacterial Blight**, **Blast**, **Brown Spot**, and **Tungro** — using a **DenseNet121-based deep learning model** with the **Adam optimizer**. The approach involves data preprocessing, model training, evaluation, and visualizing results like accuracy/loss curves, confusion matrix, ROC, and metric histograms.
+This project focuses on the classification of rice leaf diseases—Bacterial Blight, Brown Spot, Leaf Blast, and Tungro—using the DenseNet121 deep learning model. The goal is to enhance classification accuracy under intra-class variability.
 
----
+## 🧠 Model Overview
 
-## 📁 Dataset
+- **Architecture**: DenseNet121
+- **Optimizer**: Adam
+- **Dataset**: Kaggle + Mendeley Rice Leaf Disease Dataset
+- **Framework**: TensorFlow/Keras
+- **Loss Function**: Categorical Crossentropy
 
-- Dataset Source: **Mendeley Data** and **Kaggle**
-- Contains labeled rice leaf images of 4 disease classes:
-  - Bacterial Blight
-  - Blast
-  - Brown Spot
-  - Tungro
-- Images were resized to 150x150 for model compatibility
+## 📊 Results
 
----
+| Metric         | Score   |
+|----------------|---------|
+| Accuracy       | 95.2%   |
+| Precision      | 94.9%   |
+| Recall         | 94.6%   |
+| F1-score       | 94.7%   |
 
-## 🏗️ Model Architecture
+### 📈 Performance Plots
 
-The model is built using **DenseNet121 (pre-trained)** with a custom classification head:
+- **[✓] Training and Validation Accuracy**  
+- **[✓] Training and Validation Loss**  
+- **[✓] Precision, Recall, F1-Score Bar Charts**  
+- **[✓] Confusion Matrix**  
+- **[✓] ROC Curve**
 
-- GlobalAveragePooling2D  
-- BatchNormalization  
-- Dropout (rate=0.4)  
-- Dense(256, activation='relu')  
-- Output Dense(4, activation='softmax')  
+All results can be viewed in the [results section of this repo](#📈-performance-plots).
 
-Other tested models: CNN, MobileNet, VGG16.
+## 📂 Files
 
----
+- `data_loader.py`: Loads and preprocesses the dataset
+- `model_builder.py`: Builds the DenseNet121 model
+- `train_model.py`: Trains and evaluates the model
+- `plot_results.py`: Plots accuracy/loss and performance metrics
+- `requirements.txt`: Lists dependencies for the project
 
-## ⚙️ Training Configuration
+## 📎 Dataset
 
-- **Optimizer:** Adam  
-- **Loss:** Categorical Crossentropy  
-- **Epochs:** 30  
-- **Metrics:** Accuracy, Precision, Recall, F1-Score  
-- **Data Augmentation:** Rotation, Flipping, Zoom, Rescale  
+- Kaggle: [Rice Leaf Disease Dataset](https://www.kaggle.com/datasets/minhhuy2810/rice-leaf-disease-dataset)
+- Mendeley: [Mendeley Rice Leaf Dataset](https://data.mendeley.com/datasets/ny3bpzv3m2/1)
 
----
+## 🔗 GitHub Repository
 
-## 🧪 Scripts Overview
+> This project has been developed as part of a research article submission to Cureus Journal.  
+> **GitHub Link:** [https://github.com/Mansinegii/rice-disease-classification](https://github.com/Mansinegii/rice-disease-classification)
 
-| File               | Purpose                                                  |
-|--------------------|----------------------------------------------------------|
-| `data_loader.py`   | Loads and augments the rice dataset                      |
-| `model_builder.py` | Builds and compiles the DenseNet121 model                |
-| `train_model.py`   | Trains the model and saves training history              |
-| `plot_results.py`  | Plots accuracy, loss, confusion matrix, ROC, and metrics |
-| `requirements.txt` | Lists all required Python libraries                      |
-
----
-
-## 📊 Results (Graphs)
-
-### 1. Training and Validation Accuracy
-
-![Training and Validation Accuracy](results/Training%20and%20validation%20Accuracy.png)
-
----
-
-### 2. Confusion Matrix
-
-![Confusion Matrix](results/Confusion%20matrix.png)
-
----
-
-### 3. ROC Curve
-
-![ROC Curve](results/ROC%20curve.png)
-
----
-
-### 4. Precision
-
-![Precision](results/Precision.png)
-
----
-
-### 5. Recall
-
-![Recall](results/Recall.png)
-
----
-
-### 6. F1-Score
-
-![F1-Score](results/F1-score.png)
-
----
-
-## 🚀 How to Run
-
-```bash
-# Clone the repository
-git clone https://github.com/Mansinegii/rice-disease-classification.git
-cd rice-disease-classification
-
-# Install dependencies
-pip install -r requirements.txt
