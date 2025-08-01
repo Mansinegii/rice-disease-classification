@@ -20,11 +20,11 @@ This project focuses on detecting and classifying four types of rice leaf diseas
 
 The model is built using **DenseNet121 (pre-trained)** with a custom classification head:
 
-- GlobalAveragePooling2D
-- BatchNormalization
-- Dropout (rate=0.4)
-- Dense(256, activation='relu')
-- Output Dense(4, activation='softmax')
+- GlobalAveragePooling2D  
+- BatchNormalization  
+- Dropout (rate=0.4)  
+- Dense(256, activation='relu')  
+- Output Dense(4, activation='softmax')  
 
 Other tested models: CNN, MobileNet, VGG16.
 
@@ -32,65 +32,65 @@ Other tested models: CNN, MobileNet, VGG16.
 
 ## ⚙️ Training Configuration
 
-- **Optimizer:** Adam
-- **Loss:** Categorical Crossentropy
-- **Epochs:** 30
-- **Metrics:** Accuracy, Precision, Recall, F1-Score
-- **Data Augmentation:** Rotation, Flipping, Zoom, Rescale
+- **Optimizer:** Adam  
+- **Loss:** Categorical Crossentropy  
+- **Epochs:** 30  
+- **Metrics:** Accuracy, Precision, Recall, F1-Score  
+- **Data Augmentation:** Rotation, Flipping, Zoom, Rescale  
 
 ---
 
 ## 🧪 Scripts Overview
 
-| File | Purpose |
-|------|---------|
-| `data_loader.py` | Loads and augments the rice dataset |
-| `model_builder.py` | Builds and compiles the DenseNet121 model |
-| `train_model.py` | Trains the model and saves training history |
-| `plot_results.py` | Plots accuracy, loss, confusion matrix, ROC, and metric histograms |
-| `requirements.txt` | Lists all required Python libraries |
+| File               | Purpose                                                  |
+|--------------------|----------------------------------------------------------|
+| `data_loader.py`   | Loads and augments the rice dataset                      |
+| `model_builder.py` | Builds and compiles the DenseNet121 model                |
+| `train_model.py`   | Trains the model and saves training history              |
+| `plot_results.py`  | Plots accuracy, loss, confusion matrix, ROC, and metrics |
+| `requirements.txt` | Lists all required Python libraries                      |
 
 ---
 
 ## 📊 Results (Graphs)
 
-### 1. Accuracy vs Loss
+### 1. Training and Validation Accuracy
 
-![Accuracy and Loss](results/Screenshot%20(47).png)
+![Training and Validation Accuracy](results/Training%20and%20validation%20Accuracy.png)
 
 ---
 
 ### 2. Confusion Matrix
 
-![Confusion Matrix](results/Screenshot%20(48).png)
+![Confusion Matrix](results/Confusion%20matrix.png)
 
 ---
 
 ### 3. ROC Curve
 
-![ROC Curve](results/Screenshot%20(49)-Picsart-AiImageEnhancer.png)
+![ROC Curve](results/ROC%20curve.png)
 
 ---
 
-### 4. Precision Histogram
+### 4. Precision
 
-![Precision](results/Screenshot%20(50).png)
-
----
-
-### 5. Recall Histogram
-
-![Recall](results/Screenshot%20(52).png)
+![Precision](results/Precision.png)
 
 ---
 
-### 6. F1-Score Histogram
+### 5. Recall
 
-![F1 Score](results/Screenshot%20(67).png)
+![Recall](results/Recall.png)
 
 ---
 
-## 🔧 Installation
+### 6. F1-Score
+
+![F1-Score](results/F1-score.png)
+
+---
+
+## 🚀 How to Run
 
 ```bash
 # Clone the repository
