@@ -37,10 +37,13 @@ All results can be viewed in the [results section of this repo](#📈-performanc
 - `plot_results.py`: Plots accuracy/loss and performance metrics
 - `requirements.txt`: Lists dependencies for the project
 
-## 📎 Dataset
+  ## 📎 Dataset
 
-- Kaggle: [Rice Leaf Disease Dataset](https://www.kaggle.com/datasets/minhhuy2810/rice-leaf-disease-dataset)
-- Mendeley: [Mendeley Rice Leaf Dataset](https://data.mendeley.com/datasets/ny3bpzv3m2/1)
+- **Mendeley Data**: [Rice Leaf Disease Dataset](https://data.mendeley.com/datasets/fwcj7stb8r/1)
+  > D. H. Phung, "Rice Leaf Disease Image Dataset," Mendeley Data, V1, 2022.  
+  DOI: [10.17632/fwcj7stb8r.1](https://doi.org/10.17632/fwcj7stb8r.1)
+
+
 
 ## 🔗 GitHub Repository
 
