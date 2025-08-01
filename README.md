@@ -6,7 +6,7 @@ This project focuses on the classification of rice leaf diseases—Bacterial Bli
 
 - **Architecture**: DenseNet121
 - **Optimizer**: Adam
-- **Dataset**: Kaggle + Mendeley Rice Leaf Disease Dataset
+- **Dataset**: Mendeley Rice Leaf Disease Dataset
 - **Framework**: TensorFlow/Keras
 - **Loss Function**: Categorical Crossentropy
 
@@ -14,10 +14,8 @@ This project focuses on the classification of rice leaf diseases—Bacterial Bli
 
 | Metric         | Score   |
 |----------------|---------|
-| Accuracy       | 95.2%   |
-| Precision      | 94.9%   |
-| Recall         | 94.6%   |
-| F1-score       | 94.7%   |
+| Accuracy       | 95.00%   |
+
 
 ### 📈 Performance Plots
 
@@ -27,7 +25,7 @@ This project focuses on the classification of rice leaf diseases—Bacterial Bli
 - **[✓] Confusion Matrix**  
 - **[✓] ROC Curve**
 
-All results can be viewed in the [results section of this repo](#📈-performance-plots).
+
 
 ## 📂 Files
 
